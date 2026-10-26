@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-crosschain-atomic-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHSWAP"
+      },
+      "tools": [
+        {
+          "name": "verify_bchswap_invariants",
+          "description": "Verifies deterministic invariants for BCH Cross-Chain Atomic AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchswap_action",
+          "description": "Executes authenticated Bridge state transition."
+        }
+      ]
+    }
+  }
+}
